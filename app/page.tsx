@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -12,8 +10,18 @@ export default function Home() {
             I build modern, scalable web applications with a passion for clean
             design, performance, and user experience.
           </p>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="max-w-md text-lg leading-8 text-red-600 shadow-sm shadow-red-200 dark:shadow-red-900/20 dark:text-red-400">
             This website is under construction. Stay tuned for updates!
+          </p>
+          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Here are all my projects :{" "}
+            <a
+              className="text-blue-600"
+              href="https://ismaelloko.dripcodestudio.com/"
+              target="_blank"
+            >
+              Click me !
+            </a>
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">

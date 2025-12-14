@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ismael Loko | Full-Stack Developer",
   description: "Personal website of Ismael Loko",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

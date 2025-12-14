@@ -11,7 +11,7 @@ export default function ProjectsPage() {
         {/* Navigation */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-8 text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 font-medium transition-colors"
+          className="inline-flex items-center gap-2 mb-8 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 font-medium transition-colors"
         >
           <ArrowLeft size={18} />
           Back to Home
@@ -33,6 +33,21 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
+        </div>
+
+        {/* Additional Projects Link */}
+        <div className="w-full mb-12 p-6 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+          <p className="text-gray-700 dark:text-gray-300">
+            View all my projects, finished or not, archived{" "}
+            <a
+              href="https://ismael-projects-page.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 transition-colors underline"
+            >
+              here
+            </a>
+          </p>
         </div>
 
         <Footer />

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Github, ArrowLeft } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft, Home } from "lucide-react";
 import { projects } from "@/data/projectsData";
+import { icons } from "@/data/icons";
 import Footer from "@/components/Footer";
 
 interface ProjectDetailPageProps {
@@ -41,13 +42,22 @@ export default async function ProjectDetailPage({
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black">
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-start justify-start py-16 px-8 bg-white dark:bg-black">
         {/* Navigation */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 mb-8 text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 font-medium transition-colors"
-        >
-          <ArrowLeft size={18} />
-          Back to Home
-        </Link>
+        <div className="w-full mb-8 flex items-center gap-3">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-amber-300 dark:border-amber-700 text-amber-600 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors"
+            title="Go to Home"
+          >
+            <Home size={20} />
+          </Link>
+          <Link
+            href="/projects"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-amber-300 dark:border-amber-700 text-amber-600 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors"
+            title="Back to All Projects"
+          >
+            <ArrowLeft size={20} />
+          </Link>
+        </div>
 
         {/* Project Header */}
         <div className="w-full mb-8">
@@ -65,7 +75,7 @@ export default async function ProjectDetailPage({
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-pink-600 dark:bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700 dark:hover:bg-pink-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 dark:bg-amber-600 text-white font-medium rounded-md hover:bg-amber-700 dark:hover:bg-amber-700 transition-colors"
               >
                 <ExternalLink size={18} />
                 Visit Live Project
@@ -87,12 +97,12 @@ export default async function ProjectDetailPage({
 
         {/* Project Image */}
         <div className="w-full mb-8 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
-          <div className="relative w-full h-96 flex items-center justify-center">
+          <div className="relative w-full h-96">
             <Image
               src={project.thumbnail}
               alt={project.title}
               fill
-              className="object-contain p-8"
+              className="object-cover"
               priority
             />
           </div>
@@ -104,18 +114,38 @@ export default async function ProjectDetailPage({
             Technology Stack
           </h2>
           <div className="flex flex-wrap gap-3">
-            {project.stacks.map((stack, idx) => (
-              <a
-                key={idx}
-                href={stack.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                title={`Learn more about ${stack.name}`}
-              >
-                <span className="text-sm font-medium">{stack.name}</span>
-              </a>
-            ))}
+            {project.stacks.map((stack, idx) => {
+              const iconSvg =
+                icons[
+                  stack.name
+                    .toLowerCase()
+                    .replace(/[.\s/]/g, "") as keyof typeof icons
+                ];
+
+              return (
+                <a
+                  key={idx}
+                  href={stack.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700 rounded-md hover:bg-amber-200 dark:hover:bg-amber-900/30 transition-colors"
+                  title={`Learn more about ${stack.name}`}
+                >
+                  {iconSvg && (
+                    <div
+                      className="w-6 h-6 flex-shrink-0"
+                      dangerouslySetInnerHTML={{
+                        __html: iconSvg.replace(
+                          /viewBox="0 0 24 24"/,
+                          `viewBox="0 0 24 24" style="fill: ${stack.color}"`
+                        ),
+                      }}
+                    />
+                  )}
+                  <span className="text-sm font-medium">{stack.name}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
 
@@ -128,7 +158,7 @@ export default async function ProjectDetailPage({
                 key={idx}
                 className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
               >
-                <span className="mt-1 inline-block w-2 h-2 bg-pink-600 dark:bg-pink-400 rounded-full shrink-0"></span>
+                <span className="mt-1 inline-block w-2 h-2 bg-amber-600 dark:bg-amber-400 rounded-full shrink-0"></span>
                 <span>{feature}</span>
               </li>
             ))}

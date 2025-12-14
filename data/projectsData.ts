@@ -1,10 +1,9 @@
 import type { IProjects } from "../types/types";
 import { icons } from "./icons";
-import { v4 as uuidv4 } from "uuid";
 
 export const projects: IProjects[] = [
   {
-    id: uuidv4(),
+    id: "acadxp",
     title: "AcadXP",
     featured: true,
     description:
@@ -63,7 +62,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "devkit",
     title: "DevKit",
     featured: true,
     description:
@@ -105,7 +104,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "afrochef",
     title: "AfroChef",
     featured: false,
     description:
@@ -149,7 +148,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "ledgeryear",
     title: "LedgerYear",
     featured: false,
     description:
@@ -191,7 +190,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "random-color-toolkit",
     title: "Random Color Toolkit",
     featured: false,
     description:
@@ -218,7 +217,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "drip-on-drip-dashboard",
     title: "Drip On Drip Dashboard",
     featured: false,
     description:
@@ -273,7 +272,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "dripOndrip-ecommerce",
     title: "DripOnDrip - E-commerce Website for Clothing",
     featured: false,
     description:
@@ -343,7 +342,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "dripOndrip-api",
     title: "DripOnDrip E-commerce API",
     featured: false,
     description:
@@ -397,7 +396,7 @@ export const projects: IProjects[] = [
   },
 
   {
-    id: uuidv4(),
+    id: "dev-quotes",
     title: "Dev Quotes",
     featured: false,
     description:
@@ -446,7 +445,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "todo-app",
     title: "Todo App",
     featured: false,
     description:
@@ -497,7 +496,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "cine-verse",
     title: "Cine Verse",
     featured: false,
     description:
@@ -547,7 +546,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "assembly-endgame",
     title: "Assembly: Endgame",
     featured: false,
     description:
@@ -597,7 +596,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "tenzies-game",
     title: "Tenzies Game",
     featured: false,
     description:
@@ -648,7 +647,7 @@ export const projects: IProjects[] = [
   },
 
   {
-    id: uuidv4(),
+    id: "weather-app",
     title: "Weather App",
     featured: false,
     description:
@@ -695,7 +694,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "todo-list",
     title: "ToDo List",
     featured: false,
     description:
@@ -739,7 +738,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "tic-tac-toe",
     title: "Tic Tac Toe Game",
     featured: false,
     description:
@@ -777,7 +776,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "elibrary",
     title: " eLibrary : virtual library",
     featured: false,
     description:
@@ -815,7 +814,7 @@ export const projects: IProjects[] = [
     ],
   },
   {
-    id: uuidv4(),
+    id: "limos",
     title: "Limos : Transportation Booking",
     featured: false,
     description: "Limos is a transportation booking platform. Just Frontend.",
@@ -847,7 +846,7 @@ export const projects: IProjects[] = [
   },
 
   {
-    id: uuidv4(),
+    id: "django-crud",
     title: "Django CRUD Application",
     featured: false,
     description:

@@ -3,8 +3,28 @@ import { ISocial, IWorkExperience } from "../types/types";
 export const socials: ISocial[] = [
   {
     name: "GitHub",
-    link: "",
+    link: "https://github.com/Lil-Code30",
     icon: "github",
+  },
+  {
+    name: "Twitch",
+    link: "https://www.twitch.tv/dereal_ismael",
+    icon: "twitch",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/loko-ismael/",
+    icon: "linkedin",
+  },
+  {
+    name: "Twitter",
+    link: "https://x.com/dereal_ismael",
+    icon: "twitter",
+  },
+  {
+    name: "YouTube",
+    link: "https://www.youtube.com/@licode30",
+    icon: "youtube",
   },
 ];
 

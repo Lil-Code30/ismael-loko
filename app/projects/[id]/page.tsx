@@ -97,7 +97,7 @@ export default async function ProjectDetailPage({
 
         {/* Project Image */}
         <div className="w-full mb-8 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
-          <div className="relative w-full h-96">
+          <div className="relative w-full h-48 md:h-96">
             <Image
               src={project.thumbnail}
               alt={project.title}

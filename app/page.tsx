@@ -9,8 +9,7 @@ import {
   FileText,
 } from "lucide-react";
 import { socials } from "@/data/data";
-
-const allowedIcons = ["email", "github", "linkedin", "twitter", "resume"];
+import Footer from "@/components/Footer";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={18} />,
@@ -21,6 +20,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function Home() {
+  const allowedIcons = ["email", "github", "linkedin", "resume"];
   const filteredSocials = socials.filter((social) =>
     allowedIcons.includes(social.icon.toLowerCase())
   );
@@ -30,7 +30,7 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-start justify-start py-16 px-8 bg-white dark:bg-black">
         {/* Header Section */}
         <div className="w-full mb-12">
-          <div className="flex items-start justify-between gap-8 mb-6">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center md:items-start md:justify-between gap-8 mb-6">
             {/* Left Content */}
             <div className="flex-1">
               <h1 className="text-4xl font-bold mb-2 dark:text-white">
@@ -101,11 +101,30 @@ export default function Home() {
               emerging technologies, with a diploma in IT support and experience
               in technical support. Strong programming and technical
               troubleshooting skills. Curious, self-reliant, and
-              solution-oriented, I regularly develop and share web projects on
-              GitHub and YouTube.
+              solution-oriented, I regularly develop and share web projects on{" "}
+              <a
+                href="https://github.com/Lil-Code30"
+                target="_blank"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                style={{ textDecoration: "underline wavy" }}
+              >
+                GitHub
+              </a>
+              and{" "}
+              <a
+                href="https://www.youtube.com/@licode30"
+                target="_blank"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                style={{ textDecoration: "underline wavy" }}
+              >
+                YouTube
+              </a>
+              .
             </p>
           </div>
         </div>
+
+        <Footer />
       </main>
     </div>
   );

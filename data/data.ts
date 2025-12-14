@@ -1,4 +1,4 @@
-import { ISocial, IWorkExperience } from "../types/types";
+import { ISocial, IWorkExperience, IEducation } from "../types/types";
 
 export const socials: ISocial[] = [
   {
@@ -98,5 +98,26 @@ export const workExperiences: IWorkExperience[] = [
       "System Installation",
     ],
     type: "Internship",
+  },
+];
+
+export const education: IEducation[] = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    school: "Université du Québec à Rimouski",
+    schoolLink: "https://www.uqar.ca",
+    location: "Lévis Campus, Quebec, Canada",
+    period: "August 2025 – In Progress",
+    description:
+      "Pursuing a comprehensive degree in computer science with focus on software development.",
+  },
+  {
+    degree: "Diploma in IT Support",
+    school: "CFP Marie-Rollet",
+    schoolLink: "https://cfpmr.com/",
+    location: "Quebec City, Quebec, Canada",
+    period: "Jan. 2023 – May 2024",
+    description:
+      "Completed professional diploma in IT support with practical skills in system administration and technical troubleshooting.",
   },
 ];

@@ -10,8 +10,10 @@ import {
 } from "lucide-react";
 import { socials } from "@/data/data";
 import { workExperiences } from "@/data/data";
+import { education } from "@/data/data";
 import Footer from "@/components/Footer";
 import WorkExperienceCard from "@/components/WorkExperienceCard";
+import EducationCard from "@/components/EducationCard";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={18} />,
@@ -134,6 +136,16 @@ export default function Home() {
           <div className="space-y-6">
             {workExperiences.map((experience, idx) => (
               <WorkExperienceCard key={idx} experience={experience} />
+            ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="w-full mb-12">
+          <h2 className="text-3xl font-bold mb-8 dark:text-white">Education</h2>
+          <div className="space-y-6">
+            {education.map((edu, idx) => (
+              <EducationCard key={idx} education={edu} />
             ))}
           </div>
         </div>

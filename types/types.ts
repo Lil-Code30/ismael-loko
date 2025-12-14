@@ -34,3 +34,12 @@ export type IWorkExperience = {
   technologies: string[];
   type: "Full-time" | "Part-time" | "Contract" | "Internship" | "Freelance";
 };
+
+export type IEducation = {
+  degree: string;
+  school: string;
+  schoolLink?: string;
+  location: string;
+  period: string;
+  description?: string;
+};

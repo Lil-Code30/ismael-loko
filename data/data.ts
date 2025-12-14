@@ -1,4 +1,11 @@
-import { ISocial, IWorkExperience, IEducation } from "../types/types";
+import {
+  ISocial,
+  IWorkExperience,
+  IEducation,
+  IProjects,
+} from "../types/types";
+import { icons } from "./icons";
+import { v4 as uuidv4 } from "uuid";
 
 export const socials: ISocial[] = [
   {

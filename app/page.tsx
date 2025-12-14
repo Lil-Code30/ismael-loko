@@ -11,9 +11,11 @@ import {
 import { socials } from "@/data/data";
 import { workExperiences } from "@/data/data";
 import { education } from "@/data/data";
+import { projects } from "@/data/projectsData";
 import Footer from "@/components/Footer";
 import WorkExperienceCard from "@/components/WorkExperienceCard";
 import EducationCard from "@/components/EducationCard";
+import ProjectCard from "@/components/ProjectCard";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={18} />,
@@ -79,7 +81,7 @@ export default function Home() {
             </div>
 
             {/* Right Avatar */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="w-40 h-40 rounded-full border-4 border-blue-500 overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                 <Image
                   src="/profile.JPG"
@@ -147,6 +149,36 @@ export default function Home() {
             {education.map((edu, idx) => (
               <EducationCard key={idx} education={edu} />
             ))}
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="w-full mb-12">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2 dark:text-white">
+              Personal Projects
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-md">
+              These are some of my personal projects that I made in the past.
+              Some of them are still in use, some are not. Mostly made them just
+              for fun and to learn new things!
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {projects
+              .filter((project) => project.featured)
+              .slice(0, 2)
+              .map((project, idx) => (
+                <ProjectCard key={idx} project={project} />
+              ))}
+          </div>
+          <div className="text-center">
+            <a
+              href="/projects"
+              className="inline-flex items-center px-6 py-2 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+            >
+              View All Projects
+            </a>
           </div>
         </div>
 

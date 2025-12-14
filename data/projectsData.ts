@@ -74,7 +74,7 @@ export const projects: IProjects[] = [
       "Submit Resources: Contribute your own resources to the community.",
       "Responsive Design: Mobile-friendly interface for all devices.",
     ],
-    thumbnail: "/images/projects/devkit/devkit.png",
+    thumbnail: "/projects/devkit/devkit.png",
     link: "https://devkit.dripcodestudio.com/",
     github: "https://github.com/DevKit-Org",
     stacks: [

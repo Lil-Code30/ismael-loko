@@ -75,6 +75,12 @@ export const projects: IProjects[] = [
     ],
     thumbnail: "/projects/devkit/devkit.png",
     link: "https://devkit.dripcodestudio.com/",
+    images: [
+      "/projects/devkit/showcase/1.png",
+      "/projects/devkit/showcase/2.png",
+      "/projects/devkit/showcase/3.png",
+      "/projects/devkit/showcase/4.png",
+    ],
     github: "https://github.com/DevKit-Org",
     stacks: [
       {

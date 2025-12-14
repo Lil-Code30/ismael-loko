@@ -4,6 +4,7 @@ import { ExternalLink, Github, ArrowLeft, Home } from "lucide-react";
 import { projects } from "@/data/projectsData";
 import { icons } from "@/data/icons";
 import Footer from "@/components/Footer";
+import ImageGallery from "@/components/ImageGallery";
 
 interface ProjectDetailPageProps {
   params: Promise<{
@@ -164,6 +165,11 @@ export default async function ProjectDetailPage({
             ))}
           </ul>
         </div>
+
+        {/* Image Gallery */}
+        {project.images && project.images.length > 0 && (
+          <ImageGallery images={project.images} projectTitle={project.title} />
+        )}
 
         <Footer />
       </main>

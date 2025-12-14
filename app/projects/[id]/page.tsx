@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 import { ExternalLink, Github, ArrowLeft, Home } from "lucide-react";
 import { projects } from "@/data/projectsData";
 import { icons } from "@/data/icons";
@@ -10,6 +11,51 @@ interface ProjectDetailPageProps {
   params: Promise<{
     id: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectDetailPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
+
+  if (!project) {
+    return {
+      title: "Project Not Found | Ismael Loko",
+      description: "The project you're looking for could not be found.",
+    };
+  }
+
+  return {
+    title: `${project.title} | Ismael Loko`,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: [
+        {
+          url: project.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+      url: `https://ismael-loko.com/projects/${project.id}`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [project.thumbnail],
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
 }
 
 export default async function ProjectDetailPage({

@@ -1,8 +1,29 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projectsData";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "All Projects | Ismael Loko",
+  description:
+    "A collection of projects I've built and contributed to over the years. Explore my full-stack applications, frontend work, and more.",
+  openGraph: {
+    title: "All Projects | Ismael Loko",
+    description:
+      "A collection of projects I've built and contributed to over the years.",
+    url: "https://ismael-loko.com/projects",
+    siteName: "Ismael Loko - Full-Stack Developer",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Projects | Ismael Loko",
+    description:
+      "A collection of projects I've built and contributed to over the years.",
+  },
+};
 
 export default function ProjectsPage() {
   return (

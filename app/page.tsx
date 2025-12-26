@@ -128,6 +128,16 @@ export default function Home() {
                 YouTube
               </a>
               .
+              <p>
+                I am documenting my journet to be great bavhend.{" "}
+                <a
+                  href="https://til-journal.vercel.app/"
+                  className="py-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                  target="_blank"
+                >
+                  Check it out
+                </a>
+              </p>
             </p>
           </div>
         </div>

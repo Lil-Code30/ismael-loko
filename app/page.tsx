@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { GitHubCalendar } from "react-github-calendar";
 import {
   Github,
   Twitch,
@@ -129,9 +131,14 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="w-full mb-8 md:mb-12 overflow-x-auto -mx-8 md:mx-0 px-8 md:px-0">
+          <div className="inline-block min-w-full my-5">
+            <GitHubCalendar username="lil-code30" />
+          </div>
+        </div>
 
         {/* Experiences Section */}
-        <div className="w-full mb-12">
+        <div className="w-full my-5">
           <h2 className="text-3xl font-bold mb-8 dark:text-white">
             Experiences
           </h2>
@@ -173,12 +180,12 @@ export default function Home() {
               ))}
           </div>
           <div className="text-center">
-            <a
+            <Link
               href="/projects"
               className="inline-flex items-center px-6 py-2 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
             >
               View All Projects
-            </a>
+            </Link>
           </div>
         </div>
 

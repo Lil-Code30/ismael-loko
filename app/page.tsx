@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Github,
   Twitch,
@@ -16,6 +17,7 @@ import Footer from "@/components/Footer";
 import WorkExperienceCard from "@/components/WorkExperienceCard";
 import EducationCard from "@/components/EducationCard";
 import ProjectCard from "@/components/ProjectCard";
+import GitHubCalendarWrapper from "@/components/GitHubCalendarWrapper";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={18} />,
@@ -126,12 +128,23 @@ export default function Home() {
                 YouTube
               </a>
               .
+              <p>
+                I am documenting my journet to be great bavhend.{" "}
+                <a
+                  href="https://til-journal.vercel.app/"
+                  className="py-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                  target="_blank"
+                >
+                  Check it out
+                </a>
+              </p>
             </p>
           </div>
         </div>
+        <GitHubCalendarWrapper username="lil-code30" />
 
         {/* Experiences Section */}
-        <div className="w-full mb-12">
+        <div className="w-full my-5">
           <h2 className="text-3xl font-bold mb-8 dark:text-white">
             Experiences
           </h2>
@@ -173,12 +186,12 @@ export default function Home() {
               ))}
           </div>
           <div className="text-center">
-            <a
+            <Link
               href="/projects"
               className="inline-flex items-center px-6 py-2 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
             >
               View All Projects
-            </a>
+            </Link>
           </div>
         </div>
 

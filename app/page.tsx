@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GitHubCalendar } from "react-github-calendar";
 import {
   Github,
   Twitch,
@@ -18,6 +17,7 @@ import Footer from "@/components/Footer";
 import WorkExperienceCard from "@/components/WorkExperienceCard";
 import EducationCard from "@/components/EducationCard";
 import ProjectCard from "@/components/ProjectCard";
+import GitHubCalendarWrapper from "@/components/GitHubCalendarWrapper";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={18} />,
@@ -141,11 +141,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full mb-8 md:mb-12 overflow-x-auto -mx-8 md:mx-0 px-8 md:px-0">
-          <div className="inline-block min-w-full my-5">
-            <GitHubCalendar username="lil-code30" />
-          </div>
-        </div>
+        <GitHubCalendarWrapper username="lil-code30" />
 
         {/* Experiences Section */}
         <div className="w-full my-5">

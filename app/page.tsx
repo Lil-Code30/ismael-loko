@@ -109,7 +109,7 @@ export default function Home() {
               emerging technologies, with a diploma in IT support and experience
               in technical support. Strong programming and technical
               troubleshooting skills. Curious, self-reliant, and
-              solution-oriented, I regularly develop and share web projects on{" "}
+              solution-oriented, I regularly develop and share my projects on{" "}
               <a
                 href="https://github.com/Lil-Code30"
                 target="_blank"
@@ -129,7 +129,7 @@ export default function Home() {
               </a>
               .
               <p>
-                I am documenting my journet to be great bavhend.{" "}
+                I am currently documenting my journey to be great engineer.{" "}
                 <a
                   href="https://til-journal.vercel.app/"
                   className="py-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
